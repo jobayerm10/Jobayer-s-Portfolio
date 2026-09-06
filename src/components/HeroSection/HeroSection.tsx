@@ -104,13 +104,19 @@ export const HeroSection = () => {
             >
               View Work <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10"
+            <a
+              href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_mahmud-resume.pdf?download=1"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Resume <Download className="w-4 h-4" />
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10 cursor-pointer"
+              >
+                Resume <Download className="w-4 h-4" />
+              </Button>
+            </a>
           </motion.div>
 
           {/* Social Links */}
