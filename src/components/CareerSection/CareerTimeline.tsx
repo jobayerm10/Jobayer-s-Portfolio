@@ -49,8 +49,8 @@ export const CareerTimeline = () => {
     <div id="career">
       <ScrollTimeline
         events={careerEvents}
-        title="Career Journey"
-        subtitle="An evolving path of leadership, innovation, and impact"
+        title="Journey & Growth"
+        subtitle="Learning through challenges, growing through experience, and building along the way."
         animationOrder="staggered"
         cardAlignment="alternating"
         cardVariant="elevated"
