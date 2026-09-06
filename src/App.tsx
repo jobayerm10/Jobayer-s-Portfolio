@@ -11,11 +11,18 @@ import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSe
 import { ContactSection } from "./components/ContactSection/ContactSection";
 import { Footer } from "./components/Footer/Footer";
 import ReactLenis from "lenis/react";
-import { Home, User, GraduationCap, Briefcase, FolderKanban, Send, MessageSquare } from "lucide-react";
+import {
+  Home,
+  User,
+  GraduationCap,
+  Briefcase,
+  FolderKanban,
+  Send,
+  MessageSquare,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Dock from "./components/lightswind/dock";
-import { SmoothCursor } from "./components/lightswind/smooth-cursor";
 
 function App() {
   const [showDock, setShowDock] = useState(false);
@@ -25,7 +32,9 @@ function App() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const shouldShow = currentScrollY > lastScrollY && currentScrollY > window.innerHeight * 0.5;
+      const shouldShow =
+        currentScrollY > lastScrollY &&
+        currentScrollY > window.innerHeight * 0.5;
       const isTop = currentScrollY < window.innerHeight * 0.5;
 
       if (shouldShow) {
@@ -48,18 +57,45 @@ function App() {
   };
 
   const dockItems = [
-    { icon: <Home size={20} />, label: "Home", onClick: () => scrollToSection("hero") },
-    { icon: <User size={20} />, label: "About", onClick: () => scrollToSection("about") },
-    { icon: <Briefcase size={20} />, label: "Career", onClick: () => scrollToSection("career") },
-    { icon: <FolderKanban size={20} />, label: "Projects", onClick: () => scrollToSection("projects") },
-    { icon: <GraduationCap size={20} />, label: "Education", onClick: () => scrollToSection("education") },
-    { icon: <MessageSquare size={20} />, label: "Testimonials", onClick: () => scrollToSection("testimonials") },
-    { icon: <Send size={20} />, label: "Contact", onClick: () => scrollToSection("contact") },
+    {
+      icon: <Home size={20} />,
+      label: "Home",
+      onClick: () => scrollToSection("hero"),
+    },
+    {
+      icon: <User size={20} />,
+      label: "About",
+      onClick: () => scrollToSection("about"),
+    },
+    {
+      icon: <Briefcase size={20} />,
+      label: "Career",
+      onClick: () => scrollToSection("career"),
+    },
+    {
+      icon: <FolderKanban size={20} />,
+      label: "Projects",
+      onClick: () => scrollToSection("projects"),
+    },
+    {
+      icon: <GraduationCap size={20} />,
+      label: "Education",
+      onClick: () => scrollToSection("education"),
+    },
+    {
+      icon: <MessageSquare size={20} />,
+      label: "Testimonials",
+      onClick: () => scrollToSection("testimonials"),
+    },
+    {
+      icon: <Send size={20} />,
+      label: "Contact",
+      onClick: () => scrollToSection("contact"),
+    },
   ];
 
   return (
     <div className="bg-transparent min-h-screen relative overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
-      <SmoothCursor glowEffect showTrail trailLength={4} />
       <ReactLenis root options={{ smoothWheel: true, duration: 1.2 }}>
         <Header />
 
@@ -104,4 +140,3 @@ function App() {
 }
 
 export default App;
-

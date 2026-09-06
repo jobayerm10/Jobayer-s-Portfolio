@@ -6,7 +6,7 @@ import { Badge } from "../lightswind/badge";
 import { HangingIdCard } from "../lightswind/HangingIdCard";
 import { AuroraTextEffect } from "../lightswind/aurora-text-effect";
 import { DotPattern } from "../lightswind/dot-pattern";
-import image from "../../assets/heroimg.png";
+import image from "../../assets/heroimg2.jpeg";
 
 const socialLinks = [
   {
@@ -86,9 +86,9 @@ export const HeroSection = () => {
             <div className="hidden dark:block">
               <AuroraTextEffect
                 text="Jobayer Mahmud"
-                fontSize="clamp(3rem, 6.5vw, 5.5rem)"
+                fontSize="clamp(2.25rem, 5.5vw, 5.5rem)"
                 className="bg-transparent overflow-visible p-0 justify-start"
-                textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold"
+                textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold whitespace-nowrap"
               />
             </div>
           </motion.div>
@@ -185,11 +185,11 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
 
                 {/* Profile Photo with Dual Glowing Ring */}
-                <div className="mt-1 relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 overflow-hidden group">
+                <div className="mt-1 relative w-45 h-45 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 overflow-hidden group">
                   <img
                     src={image}
                     alt="Jobayer Mahmud"
-                    className="w-full h-full object-cover rounded-full filter contrast-105"
+                    className="w-full h-full object-cover rounded-full  filter contrast-105"
                     loading="eager"
                   />
                   <div className="absolute bottom-1 right-2 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-md" />
@@ -202,9 +202,6 @@ export const HeroSection = () => {
                   <h3 className="text-xl font-extrabold tracking-tight text-foreground">
                     Jobayer Mahmud
                   </h3>
-                  <div className="inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold">
-                    <span>Director of Product Engineering</span>
-                  </div>
                 </div>
 
                 <div className="w-full border-t border-border/60 my-0.5" />
