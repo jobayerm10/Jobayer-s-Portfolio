@@ -115,12 +115,7 @@ export const HeroSection = () => {
           </motion.div>
 
           {/* Social Links */}
-          <motion.div
-            className="flex items-center gap-5 justify-center md:justify-start w-full md:w-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
+          <motion.div className="flex items-center gap-5 justify-center md:justify-start w-full md:w-auto">
             {[
               { Icon: Github, href: "https://github.com/jobayerm10" },
               {
@@ -136,9 +131,9 @@ export const HeroSection = () => {
                 rel={
                   href.startsWith("http") ? "noopener noreferrer" : undefined
                 }
-                className="text-muted-foreground hover:text-foreground transition-colors hover:-translate-y-1 transform duration-200"
+                className="transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer  group  font-medium text-muted-foreground"
               >
-                <Icon className="w-7 h-7" />
+                <Icon className="w-8 h-8" />
               </a>
             ))}
           </motion.div>
