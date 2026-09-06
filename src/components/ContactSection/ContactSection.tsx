@@ -19,7 +19,6 @@ export const ContactSection = () => {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row gap-12 md:gap-24">
-          
           {/* Contact Info */}
           <div className="flex-1 space-y-8">
             <div>
@@ -27,8 +26,9 @@ export const ContactSection = () => {
                 Let's <span className="text-gradient-primary">Connect</span>
               </h2>
               <p className="text-muted-foreground">
-                Currently open for new opportunities and exciting collaborations. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                Currently open for new opportunities and exciting
+                collaborations. Whether you have a question or just want to say
+                hi, I'll try my best to get back to you!
               </p>
             </div>
 
@@ -37,19 +37,19 @@ export const ContactSection = () => {
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-medium">hello@scarlettrose.dev</span>
+                <span className="font-medium">jobayermahmud976gmail.com</span>
               </div>
               <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer group">
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="font-medium">+1 (234) 567-8900</span>
+                <span className="font-medium">+8801723180690</span>
               </div>
               <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer group">
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="font-medium">San Francisco, CA</span>
+                <span className="font-medium">Rajshahi, Bangladesh</span>
               </div>
             </div>
           </div>
@@ -58,38 +58,44 @@ export const ContactSection = () => {
           <div className="flex-1 glass-panel p-8 rounded-[2rem] border border-foreground/10 relative">
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Your Name</label>
-                <Input 
-                  type="text" 
+                <label className="block text-sm font-medium text-muted-foreground mb-1.5">
+                  Your Name
+                </label>
+                <Input
+                  type="text"
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary placeholder:text-muted-foreground/50"
-                  placeholder="John Doe"
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Your Email</label>
-                <Input 
-                  type="email" 
+                <label className="block text-sm font-medium text-muted-foreground mb-1.5">
+                  Your Email
+                </label>
+                <Input
+                  type="email"
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary placeholder:text-muted-foreground/50"
-                  placeholder="john@example.com"
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Message</label>
-                <Textarea 
+                <label className="block text-sm font-medium text-muted-foreground mb-1.5">
+                  Message
+                </label>
+                <Textarea
                   rows={4}
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary resize-none placeholder:text-muted-foreground/50 min-h-[120px]"
                   placeholder="How can I help you?"
                 />
               </div>
 
-              <Button size="lg" className="w-full rounded-xl bg-primary text-primary-foreground font-bold shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] mt-4 h-12">
-                Send Message <Send className="w-4 h-4 ml-1" />
+              <Button
+                size="lg"
+                className="w-full rounded-xl bg-primary text-primary-foreground font-bold shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] mt-4 h-12 cursor-pointer"
+              >
+                Send Message <Send className="w-4 h-4 ml-1 " />
               </Button>
             </form>
           </div>
-
         </div>
       </motion.div>
     </section>

@@ -2,10 +2,18 @@ import { motion } from "framer-motion";
 import { Code2, Globe2, Layout, Users } from "lucide-react";
 
 const stats = [
-  { icon: <Layout className="w-6 h-6" />, label: "Years Experience", value: "10+" },
-  { icon: <Code2 className="w-6 h-6" />, label: "Projects Completed", value: "150+" },
-  { icon: <Users className="w-6 h-6" />, label: "Happy Clients", value: "50+" },
-  { icon: <Globe2 className="w-6 h-6" />, label: "Global Brands", value: "12" },
+  {
+    icon: <Layout className="w-6 h-6" />,
+    label: "Years Experience",
+    value: "2+",
+  },
+  {
+    icon: <Code2 className="w-6 h-6" />,
+    label: "Projects Completed",
+    value: "10+",
+  },
+  { icon: <Users className="w-6 h-6" />, label: "Happy Clients", value: "10+" },
+  { icon: <Globe2 className="w-6 h-6" />, label: "Global Brands", value: "0" },
 ];
 
 export const AboutSection = () => {
@@ -21,13 +29,16 @@ export const AboutSection = () => {
         <div className="flex-1 space-y-8">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Passionate about <span className="text-gradient-primary">Digital Excellence</span>
+              Passionate about{" "}
+              <span className="text-gradient-primary">Digital Excellence</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a seasoned Full-Stack Developer and UI/UX Designer with over 10 years of experience 
-              delivering high-quality software solutions for global enterprises and startups. My career 
-              blends deep technical expertise with leadership skills, enabling me to design, build, and 
-              lead innovative digital products from concept to launch.
+              I am a seasoned Full-Stack Developer and UI/UX Designer with over
+              2 years of experience delivering high-quality software solutions
+              for global enterprises and startups. My career blends deep
+              technical expertise with leadership skills, enabling me to design,
+              build, and lead innovative digital products from concept to
+              launch.
             </p>
           </div>
         </div>
@@ -46,8 +57,12 @@ export const AboutSection = () => {
               <div className="text-primary mb-4 p-3 bg-primary/10 w-max rounded-xl">
                 {stat.icon}
               </div>
-              <h3 className="text-3xl font-bold text-foreground mb-1">{stat.value}</h3>
-              <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+              <h3 className="text-3xl font-bold text-foreground mb-1">
+                {stat.value}
+              </h3>
+              <p className="text-sm font-medium text-muted-foreground">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -55,4 +70,3 @@ export const AboutSection = () => {
     </section>
   );
 };
-
