@@ -107,7 +107,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="relative z-10  text-sm lg:text-[1vw] px-6 py-3 border-2 rounded-md border-black text-black transition-all duration-300 ease-out hover:text-black hover:px-10 cursor-pointer"
+                className="relative z-10   text-sm lg:text-[1vw] px-6 py-3 border-2 rounded-md border-gray-300 text-black transition-all duration-300 ease-out hover:text-black hover:px-10 cursor-pointer"
               >
                 Resume <Download className="w-4 h-4" />
               </Button>
