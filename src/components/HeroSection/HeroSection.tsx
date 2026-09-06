@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-} from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
 import { Badge } from "../lightswind/badge";
@@ -14,6 +7,24 @@ import { HangingIdCard } from "../lightswind/HangingIdCard";
 import { AuroraTextEffect } from "../lightswind/aurora-text-effect";
 import { DotPattern } from "../lightswind/dot-pattern";
 import image from "../../assets/heroimg.png";
+
+const socialLinks = [
+  {
+    href: "https://github.com/jobayerm10",
+    label: "GitHub",
+    Icon: Github,
+  },
+  {
+    href: "https://www.linkedin.com/in/jobayer-al-mahmud26/",
+    label: "LinkedIn",
+    Icon: Linkedin,
+  },
+  {
+    href: "mailto:jobayermahmud976@gmail.com",
+    label: "Email",
+    Icon: Mail,
+  },
+];
 
 export const HeroSection = () => {
   return (
@@ -128,13 +139,24 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
+            {[
+              { Icon: Github, href: "https://github.com/jobayerm10" },
+              {
+                Icon: Linkedin,
+                href: "https://www.linkedin.com/in/jobayermahmud/",
+              },
+              { Icon: Mail, href: "mailto:jobayermahmud@gmail.com" },
+            ].map(({ Icon, href }) => (
               <a
-                key={i}
-                href="#"
+                key={href}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 className="text-muted-foreground hover:text-foreground transition-colors hover:-translate-y-1 transform duration-200"
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-7 h-7" />
               </a>
             ))}
           </motion.div>
