@@ -110,7 +110,7 @@ export default function Header() {
                 {navItems.map((item) => (
                   <motion.li
                     key={item.name}
-                    className="relative group text-sm font-medium text-muted-foreground transition-colors"
+                    className="relative  text-(--text-color) text-sm lg:text-[1vw] transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer  group  font-medium text-muted-foreground"
                   >
                     <a
                       onClick={() => handleScrollTo(item.href)}
