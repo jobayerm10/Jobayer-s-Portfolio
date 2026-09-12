@@ -81,7 +81,7 @@ export default function Header() {
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
         >
-          <div className="glass-panel w-full max-w-7xl rounded-[2rem] flex items-center justify-between px-6 py-4 shadow-xl">
+          <div className="w-full max-w-7xl rounded-[2rem] flex items-center justify-between px-6 py-4 bg-transparent">
             {/* Logo */}
             <a
               onClick={() => handleScrollTo("#hero")}
