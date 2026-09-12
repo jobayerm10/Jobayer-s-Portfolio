@@ -3,10 +3,10 @@ import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
 import { Badge } from "../lightswind/badge";
-import { HangingIdCard } from "../lightswind/HangingIdCard";
+
 import { AuroraTextEffect } from "../lightswind/aurora-text-effect";
 import { DotPattern } from "../lightswind/dot-pattern";
-import image from "../../assets/heroimg2.jpeg";
+
 
 export const HeroSection = () => {
   return (
