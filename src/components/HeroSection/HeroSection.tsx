@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[100vh] flex flex-col pt-12 md:pt-16 overflow-hidden bg-background"
+      className="relative min-h-[100vh] flex flex-col pt-12 md:pt-16 overflow-hidden "
     >
       {/* Background Dot Pattern with Radial Vignette Shade */}
       <DotPattern width={16} height={16} cx={1} cy={1} cr={1} glow />
@@ -140,113 +140,7 @@ export const HeroSection = () => {
         </motion.div>
 
         {/* Right Content - Visual Hanging ID Card */}
-        <motion.div
-          className="flex-1 w-full max-w-md relative flex justify-center items-center py-2"
-          initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <HangingIdCard
-            name="Jobayer Mahmud"
-            role="Director of Engineering"
-            badgeId="SR-89240-PRO"
-            accentColor="#8b5cf6"
-            ropeLength={75}
-            ropeColor="#27272a"
-            cardWidth="w-72 sm:w-80 md:w-84"
-          >
-            <div className="flex flex-col h-full bg-card w-full">
-              {/* Card Header Banner with Avatar */}
-              <div className="relative px-5 pt-7 pb-6 flex flex-col items-center bg-gradient-to-br from-purple-700 via-primary to-indigo-950 text-white overflow-hidden">
-                {/* Circuit background overlay */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
 
-                {/* Profile Photo with Dual Glowing Ring */}
-                <div className="mt-1 relative w-45 h-45 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 overflow-hidden group">
-                  <img
-                    src={image}
-                    alt="Jobayer Mahmud"
-                    className="w-full h-full object-cover rounded-full  filter contrast-105"
-                    loading="eager"
-                  />
-                  <div className="absolute bottom-1 right-2 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-md" />
-                </div>
-              </div>
-
-              {/* Card Body */}
-              <div className="p-5 flex flex-col items-center text-center bg-card text-card-foreground flex-1 gap-3">
-                <div>
-                  <h3 className="text-xl font-extrabold tracking-tight text-foreground">
-                    Jobayer Mahmud
-                  </h3>
-                </div>
-
-                <div className="w-full border-t border-border/60 my-0.5" />
-
-                {/* Details 2x2 Grid */}
-                <div className="grid grid-cols-2 gap-2.5 w-full text-left bg-muted/40 p-3 rounded-xl border border-border/50">
-                  <div>
-                    <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">
-                      Specialty
-                    </span>
-                    <span className="font-bold text-foreground text-xs">
-                      Full-Stack AI & UX
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">
-                      Location
-                    </span>
-                    <span className="font-bold text-foreground text-xs">
-                      Rajshahi, Bangladesh
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">
-                      Experience
-                    </span>
-                    <span className="font-bold text-foreground text-xs">
-                      2 Years
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">
-                      Status
-                    </span>
-                    <span className="font-bold text-emerald-500 text-xs flex items-center gap-1">
-                      ● Active
-                    </span>
-                  </div>
-                </div>
-
-                {/* HD Barcode & Auth Tag */}
-                <div className="flex flex-col items-center mt-1 w-full gap-1">
-                  <div className="flex gap-[2.5px] items-end h-7 px-3 py-0.5 bg-white/90 dark:bg-black/40 rounded-lg border border-border/40 w-full justify-center">
-                    {Array.from({ length: 36 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className="bg-foreground rounded-[1px]"
-                        style={{
-                          width:
-                            i % 4 === 0 ? "3.5px" : i % 2 === 0 ? "2px" : "1px",
-                          height: `${50 + Math.sin(i * 1.4) * 45}%`,
-                        }}
-                      />
-                    ))}
-                  </div>
-                  {/* <div className="flex items-center justify-between w-full px-1 text-[10px]">
-                    <span className="font-mono font-bold tracking-widest text-primary">
-                      SR-89240-PRO
-                    </span>
-                    <span className="text-muted-foreground font-semibold text-[9px] uppercase tracking-wider">
-                      LIGHTSWIND UI
-                    </span>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </HangingIdCard>
-        </motion.div>
       </div>
 
       {/* Marquee appended natively to the bottom to span Full Width */}
